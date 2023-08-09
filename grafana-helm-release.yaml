@@ -1,19 +1,4 @@
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: test-grafana
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  creationTimestamp: null
-  name: grafana-helm-value-overrides
-  namespace: test-grafana
-data:
-  values.yaml: |-
-    # chart values to override.
----
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -34,4 +19,4 @@ spec:
   valuesFrom:
   - kind: ConfigMap
     name: grafana-helm-value-overrides
-    valuesKey: values.yaml # This is the default, but best to be explicit for clarity
+    valuesKey: values.yaml
