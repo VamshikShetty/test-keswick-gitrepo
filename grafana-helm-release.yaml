@@ -7,11 +7,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: grafana
-      version: 10.0
+      chart: ""
+      version: 9.x
       sourceRef:
         kind: HelmRepository
-        name: my-release-bitnamicharts
+        name: my-release-grafana
         namespace: flux-system
   interval: 15m
   timeout: 5m
