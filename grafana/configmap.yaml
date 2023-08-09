@@ -1,0 +1,30 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-value-overrides
+  namespace: ns-grafana
+data:
+  values.yaml: |-
+    global:
+      storageClass: sc-grafana
+    persistence:
+      enabled: true
+      storageClass: sc-grafana
+      size: 200Mi
+      accessMode: ReadWriteMany
+    grafana:
+      podSecurityContext:
+        enabled: true
+        runAsUser: 0
+        fsGroup: 0
+        runAsNonRoot: false
+      containerSecurityContext:
+        enabled: true
+        runAsUser: 0
+      extraVolumes:
+        - name: grafana-tmp
+          emptyDir: {}
+      extraVolumeMounts:
+        - name: grafana-tmp
+          mountPath: /opt/bitnami/grafana/tmp

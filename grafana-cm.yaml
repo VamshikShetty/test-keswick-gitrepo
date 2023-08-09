@@ -1,9 +1,0 @@
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: grafana-helm-value-overrides
-  namespace: test-grafana
-data:
-  values.yaml: |-
-    # chart values to override.

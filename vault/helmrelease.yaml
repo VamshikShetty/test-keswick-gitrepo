@@ -1,0 +1,22 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hr-vault
+  namespace: ns-hashicorp-vault
+spec:
+  chart:
+    spec:
+      chart: "bitnami/vault"
+      version: 0.2.7
+      sourceRef:
+        kind: GitRepository
+        name: git-bitnami
+        namespace: flux-system
+  interval: 15m
+  timeout: 5m
+  releaseName: vault-rn
+  valuesFrom:
+  - kind: ConfigMap
+    name: vault-value-overrides
+    valuesKey: values.yaml
