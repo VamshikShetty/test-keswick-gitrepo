@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: certmgr-value-overrides
-  namespace: ns-cert-manager
+  namespace: ns-cert-mgr
 data:
   values.yaml: |-
     installCRDs: true
