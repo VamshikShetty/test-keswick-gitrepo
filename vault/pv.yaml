@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-vault
-  namespace: ns-hashicorp-vault
+  name: pv-hashicorpvault
+  namespace: ns-hashicorpvault
 spec:
-  storageClassName: sc-vault
+  storageClassName: sc-hashicorpvault
   capacity:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/tmp/pv/vault"
+    path: "/tmp/pv-hashicorpvault"

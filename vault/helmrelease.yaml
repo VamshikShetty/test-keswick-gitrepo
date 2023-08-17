@@ -2,8 +2,8 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: hr-vault
-  namespace: ns-hashicorp-vault
+  name: hr-hashicorpvault
+  namespace: ns-hashicorpvault
 spec:
   chart:
     spec:

@@ -3,15 +3,15 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: vault-value-overrides
-  namespace: ns-hashicorp-vault
+  namespace: ns-hashicorpvault
 data:
   values.yaml: |-
     global:
-      storageClass: sc-vault
+      storageClass: sc-hashicorpvault
     server:
       replicaCount: 1
       persistence:
-        storageClass: vaultsc
+        storageClass: sc-hashicorpvault
         size: 100Mi
     volumePermissions:
       enabled: true
