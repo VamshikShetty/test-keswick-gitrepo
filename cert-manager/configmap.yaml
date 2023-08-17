@@ -3,9 +3,10 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: certmgr-value-overrides
-  namespace: ns-cert-mgr
+  namespace: ns-cert-manager
 data:
   values.yaml: |-
     installCRDs: true
     webhook:
       hostNetwork: true
+      containerPort: 10251
