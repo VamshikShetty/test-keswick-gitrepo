@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: metallb-hr-update
+  name: metallb-hr-change
   namespace: ns-metallb
 spec:
   chart:
@@ -15,4 +15,4 @@ spec:
         namespace: flux-system
   interval: 15m
   timeout: 5m
-  releaseName: metallb-releasename
+  releaseName: metallb-rn
