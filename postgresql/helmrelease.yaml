@@ -18,5 +18,5 @@ spec:
   releaseName: postgresql-rn
   valuesFrom:
   - kind: ConfigMap
-    name: postgresql-value-overrides
+    name: postgresql-value-overrides-x
     valuesKey: values.yaml
