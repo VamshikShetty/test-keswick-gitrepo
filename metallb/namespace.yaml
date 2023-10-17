@@ -2,4 +2,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: ns-metallb-o
+  name: ns-metallb
