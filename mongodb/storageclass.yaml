@@ -4,3 +4,4 @@ metadata:
   name: sc-mongodb
   namespace: ns-mongodb
 provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
