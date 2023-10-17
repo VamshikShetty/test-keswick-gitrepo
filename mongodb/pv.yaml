@@ -5,7 +5,7 @@ metadata:
  name: pv-mongodb
  namespace: ns-mongodb
 spec:
-  storageClassNaime: sc-mongodb
+  storageClassName: sc-mongodb
   capacity:
     storage: 10Gi
   accessModes:
