@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-rmq
+  namespace: ns-rmq
+spec:
+  storageClassName: sc-rmq
+  capacity:
+    storage: 400Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/tmp/pv-rmq"

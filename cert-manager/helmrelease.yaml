@@ -1,0 +1,22 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cert-mgr-hr
+  namespace: ns-cert-mgr
+spec:
+  chart:
+    spec:
+      chart: "bitnami/cert-manager"
+      version: 0.11.12
+      sourceRef:
+        kind: GitRepository
+        name: git-bitnami
+        namespace: flux-system
+  interval: 15m
+  timeout: 5m
+  releaseName: cert-mgr-rn
+  valuesFrom:
+  - kind: ConfigMap
+    name: certmgr-value-overrides
+    valuesKey: values.yaml
